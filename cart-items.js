@@ -1,8 +1,8 @@
-const express = require('express');
-const store = express.Router();
-const app = express();
-app.use(express.json());
-let autoID = 21; 
+// const express = require('express');
+// const store = express.Router();
+// const app = express();
+// app.use(express.json());
+// let autoID = 21; 
     //generates ID by +1 to last hardcoded item ID: id = autoID++
     //doesn't overwrite deleted items' IDs either  
 
@@ -161,28 +161,12 @@ store.get('', (req, res) => {
         
         
     res.status(200)
-    res.json(filteredCart);
-            
-            // === res.status(200).send('OK')
-        //}
-           
+    //res.json(filteredCart); express node code
+      
+    res.status(200)
+    
     });
 
-    //abandoned attempt at using switch cases
-        // switch (req.query['maxPrice']) {
-        //     case 3.0:
-        //         let filtered = cart.filter(item => item.price <= 3);
-        //         res.json(filtered);
-        //         break;
-        // switch (req.query['prefix']) {
-        //     case 'fancy':
-        //         let filtered = cart.filter(item => item.product.startsWith('fancy'));
-        //         res.json(filtered);
-        //         break;
-        // }
-        // default:
-        //     res.json(cart);;
-        //}
 
 // 2. GET /cart-items/:id
     // a. Action: None
